@@ -1,5 +1,5 @@
 const { Before, BeforeAll, AfterAll, After, setDefaultTimeout } = require("@cucumber/cucumber");
-const { chromium } = require("playwright");
+const { chromium } = require("playwright");                              
 
 setDefaultTimeout(60000)
 
@@ -15,7 +15,7 @@ BeforeAll(async function () {
 // close the browser
 AfterAll(async function () {
 
- //  await global.browser.close();
+ // await global.browser.close();
 });
 
 // Create a new browser context and page per scenario

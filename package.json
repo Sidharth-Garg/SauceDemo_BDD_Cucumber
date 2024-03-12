@@ -1,18 +1,19 @@
 {
   "name": "saucedemo_bdd_cucumber",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test:e2e": "cucumber-js --require cucumber.conf.js --require tests/acceptance/stepDefinitions/*.ts --format @cucumber/pretty-formatter"
+    "test:e2e": "cucumber-js --require cucumber.conf.js --require tests/acceptance/stepDefinitions/*.js --format @cucumber/pretty-formatter"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sidharth",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^7.3.1",
     "@cucumber/pretty-formatter": "^1.0.0",
     "@playwright/test": "^1.42.1",
-    "@types/node": "^20.11.25"
+    "playwright": "^1.42.1"
+
+    
   }
-}
+} 

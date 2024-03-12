@@ -31,4 +31,4 @@ Then Checking for image src value
 
 Examples:
 | username        | password     |
-| problem_user | secret_sauce |
+| problem_user    | secret_sauce |

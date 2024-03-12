@@ -1,6 +1,7 @@
-const { Given, When, Then } = require("@cucumber/cucumber");
-const { expect } = require("@playwright/test");
-
+// import {Given, When, Then } from "@cucumber/cucumber";
+// import { expect } from "@playwright/test";
+const {  Given ,When,Then} = require("@cucumber/cucumber");
+const {expect} =require("@playwright/test");
 Given("User has opened Sauce Demo site on the browser", async function () {
   await global.page.goto("https://www.saucedemo.com/");
   await expect(global.page.locator(".login_logo")).toBeVisible();
