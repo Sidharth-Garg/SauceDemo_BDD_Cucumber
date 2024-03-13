@@ -57,6 +57,13 @@ And User enter postal code "<code>"
 And User clicks on continue button
 Then Checking the title of the checkout overview page
 And Checking the details of the product name "<name>" and price "<price>" and desc "<desc>" on the page
+And Checking the multiple details like shipping , payment information , total
+When User clicks on Finish button
+Then Checking the title of checkout complete page
+And Checking for the order placed message
+When User clicks on Home Page button
+Then Checking Swag Labs title at the top of the page
+
 
 
 Examples:

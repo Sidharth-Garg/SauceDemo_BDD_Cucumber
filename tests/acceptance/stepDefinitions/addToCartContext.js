@@ -70,3 +70,23 @@ When('User clicks on continue button',async function () {
 Then('Checking the title of the checkout overview page',async function () {
   await expect(page.locator('.title')).toHaveText("Checkout: Overview");
 });
+Then('Checking the multiple details like shipping , payment information , total',async function () {
+  await expect(page.getByText('Payment Information')).toBeVisible();
+  await expect(page.getByText('Shipping Information')).toBeVisible();
+  await expect(page.getByText('Price Total')).toBeVisible();
+  await expect(page.locator('[class="summary_info_label summary_total_label"]')).toContainText( "Total:" );
+});
+When('User clicks on Finish button',async function () {
+  await expect(page.locator('#finish')).toBeVisible();
+  await page.locator('#finish').click();
+});
+Then('Checking the title of checkout complete page',async function () {
+  await expect(page.locator('.title')).toHaveText("Checkout: Complete!");
+});
+Then('Checking for the order placed message',async function () {
+  await expect(page.locator('.complete-header')).toHaveText("Thank you for your order!");
+});
+When('User clicks on Home Page button',async function () {
+  await expect(page.locator('#back-to-products')).toBeVisible();
+  await page.locator('#back-to-products').click();
+});

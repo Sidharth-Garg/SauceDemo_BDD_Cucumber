@@ -15,7 +15,7 @@ BeforeAll(async function () {
 // close the browser
 AfterAll(async function () {
 
- // await global.browser.close();
+ await global.browser.close();
 });
 
 // Create a new browser context and page per scenario
@@ -25,7 +25,7 @@ Before(async function () {
 });
 
 // Cleanup after each scenario
-// After(async function () {
-//    await global.page.close();
-//    await global.context.close();
-// });
+After(async function () {
+   await global.page.close();
+   await global.context.close();
+});
